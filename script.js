@@ -1,6 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
 
+
 function updateScores(){
 document.querySelector('#userScore').innerHTML = userScore;
 document.querySelector('#computerScore').innerHTML= computerScore;
@@ -58,6 +59,12 @@ function selectChoice(choice) {
 
 
     updateScores();
+
+    if(computerScore === 5 || userScore === 5){
+        const winnerModal = new bootstrap.Modal(document.getElementById('winnerModal'))
+        winnerModal.show();
+    }
+    
 }
 
 function makeComputerChoice(){

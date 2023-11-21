@@ -60,7 +60,11 @@ function selectChoice(choice) {
 
     updateScores();
 
-    if(computerScore === 5 || userScore === 5){
+    if(computerScore === 5){
+        const loserModal = new bootstrap.Modal(document.getElementById('loserModal'))
+        loserModal.show();
+    } 
+    if(userScore === 5){
         const winnerModal = new bootstrap.Modal(document.getElementById('winnerModal'))
         winnerModal.show();
     }
